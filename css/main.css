@@ -75,10 +75,18 @@ li:hover{
     display: none;
     width: 100%;
     padding: 15px 10px;
-    text-align: center;
     color: white;
     cursor: pointer;
     background-color: rgb(4, 36, 77);
+}
+.navicon{
+    margin:auto;
+}
+.bar{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: white;
 }
 /*carousel*/
 .mySlides {display: none;}
@@ -348,7 +356,7 @@ text-align: center;
     nav ul li{
         width: 100%;
         padding: 15px;
-        text-align: center;
+        text-align: left;
     }
     .handler{
         display: block;
