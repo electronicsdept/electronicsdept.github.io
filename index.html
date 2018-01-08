@@ -15,16 +15,17 @@
     <div class="mail">Mail:&nbsp;<a href="mailto:admin@example.com">admin@example.com</a></div>
   </div>
   <!--navigation-->
-  <div class="topnav col-12" id="myTopnav">
-      <a href="#" class="logo">Electronics Department</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-      <a href="#about" class="active">Contact</a>
-      <a href="#about" class="active">About</a>
-      <a href="#myresources" class="active">Resource</a>
-      <a href="#mynotice" class="active">Notice</a>
-      <a href="http://www.asutoshcollege.in/" class="active">Admission</a>
-      <a href="#home" class="active">Home</a>
-    </div>
+  <nav>
+    <div class="handler" onclick="navbar()">&#9776;</div>
+    <ul id="myNav" class="def">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Faculty</a></li>
+      <li><a href="#">Notice</a></li>
+      <li><a href="#">Downloads</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
     <!--carousel-->
     <div class="slideshow-container">
       <div class="mySlides fade">
@@ -80,8 +81,8 @@
                   </div>
                   <div class="card">
                       <img src="img/avatar.png" />
-                      <h4>Will be</h4>
-                      <p>Added Soon</p>
+                        <h4>Will be</h4>
+                          <p>Added Soon</p>
                     </div>
                     <div class="card">
                         <img src="img/avatar.png" />

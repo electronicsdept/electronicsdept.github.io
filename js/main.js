@@ -1,12 +1,12 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
+function navbar(){
+    var x = document.getElementById("myNav");
+    if(x.className === "def"){
+    x.className += " showing";
     } else {
-        x.className = "topnav";
+    x.className = "def";
     }
-}
+    }
 /*carousel*/
 var slideIndex = 1;
 showSlides(slideIndex);
