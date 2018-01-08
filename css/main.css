@@ -163,6 +163,7 @@ img {vertical-align: middle;}
     font-size: 2em;
     text-align: center;
     margin-bottom: -0.1px;
+    padding-bottom: 2px;
 }
 .updates{
     margin-top: 10px;
@@ -177,7 +178,7 @@ img {vertical-align: middle;}
     border-width: 5px;
     border: 1px;
     border-style: solid;
-    border-color: white;
+    border-color: rgba(255, 255, 255, 0.39);
     border-radius: 5px;
 }
 .underline{
@@ -187,47 +188,64 @@ img {vertical-align: middle;}
     height: 5px;
     background-color: rgb(0, 110, 255);
 }
-/*Staff*/
-.staff{
-    background-color: rgb(135, 150, 165);
+/*about*/
+.about{
+    background-color: rgba(4, 116, 255, 0.35);
     margin-top: 5%;
     padding-top: 0.5%;
-    padding-bottom: 15em;
+    padding-bottom: 6em;
+}
+.dHeader{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0px;
+    padding-bottom: 2px;
+}
+.dHeader > .underline {
+    padding-bottom: 2px;
+}
+.dContent{
+    padding-top: 3em;
+    margin:auto;
+    width: 75%;
+    font-size: 1.5em;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.637);
+}
+.dContent:hover{
+    color: black;
+}
+/*Staff*/
+.staff{
+    background-color: rgb(115, 174, 234);
+    padding-top: 0.5%;
+    padding-bottom: 6em;
+}
+.sHeader{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0;
+    padding-bottom: 2px;
+}
+.sHeader > .underline {
+    padding-bottom: 2px;
 }
 .document{
-    background-color: rgb(175, 186, 194);
+    background-color: rgba(0, 117, 202, 0.63);
     padding-top: 0.5%;
     padding-bottom: 100px;
     margin-bottom: -50px;
 }
-.header_n , .header_r {
-    position: sticky;
-    font-size: 1.5em;
-    text-align: center;
-    background-color: rgb(0, 110, 255);
-    margin-top:0px;
-    border-radius: 5px;
-    padding: 1px 0px 1px 0;
-    color:white; 
-}
-.npost, .rpost{
-    padding: 5px;
-    cursor: pointer;
-}
-.npost:hover{
-    background-color: rgb(0,110,255);
-    color: white;
-    font-weight: bold;
-}
-.rpost:hover{
-    background-color: rgb(0,110,255);
-    color: white;
-    font-weight: bold;
+.notice, .resources {
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 /*Footer*/
 .about-footer{
     margin-top:50px;
-    background-color: rgb(51, 61, 70);
+    background-color: rgba(39, 88, 132, 0.88);
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -320,17 +338,19 @@ text-align: center;
 .col-12.document > .header{
     font-size: 1.5em;
 }
-/*updates*/
-.updates{
-    display: block;
-}
-.col {
-    display: flex;
-    justify-content: space-between;
-  }
   /*facebook custom icon*/
   .fa-size{
     font-size: 2em;
+}
+/*About Header*/
+.dHeader{
+    font-size: 1.5em;
+}
+.dContent{
+    font-size: 1em;
+}
+.sHeader{
+    font-size: 1.5em;
 }
 }
 @media screen and (max-width: 300px) {
