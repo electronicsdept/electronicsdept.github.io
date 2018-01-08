@@ -80,7 +80,7 @@ li:hover{
     background-color: rgb(4, 36, 77);
 }
 .navicon{
-padding: 0 50%; /*to make button center*/
+padding: 0 45%; /*to make button center*/
 }
 .bar{
     width: 35px;
