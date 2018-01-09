@@ -170,22 +170,6 @@ img {vertical-align: middle;}
     margin-bottom: -0.1px;
     padding-bottom: 2px;
 }
-.updates{
-    margin-top: 10px;
-    display: flex;
-    padding: 0px 5% 0px 5%;
-    justify-content: space-between;
-}
-.col{
-    flex: 1;
-    flex-grow: 1;
-    flex-direction: column;
-    border-width: 5px;
-    border: 1px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.39);
-    border-radius: 5px;
-}
 .underline{
     margin: auto;
     padding: 0;
@@ -302,8 +286,11 @@ a{
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     grid-gap: 10px;
     margin:0 5px;
+
 }
 .info{
+    display: block; /*Only For IE 10 & 11 Support*/
+    float: left; /*Only For IE 10 & 11 Support*/
     padding: 10px 10px; 
     color: white;
 }
