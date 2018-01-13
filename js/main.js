@@ -2,11 +2,29 @@
 function navbar(){
     var x = document.getElementById("myNav");
     if(x.className === "def"){
-    x.className += " showing";
+      x.className += " showing";
     } else {
     x.className = "def";
     }
     }
+    /*fixed nav*/
+    // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {fixednav()};
+
+// Get the nav
+var navi = document.querySelector("nav");
+
+// Get the offset position of the navbar
+var fixed = navi.offsetTop;
+
+// Add the fixed class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function fixednav() {
+  if (window.pageYOffset >= fixed) {
+    navi.classList.add("fixed-nav");
+  } else {
+    navi.classList.remove("fixed-nav");
+  }
+}
 /*carousel*/
 var slideIndex = 1;
 showSlides(slideIndex);
