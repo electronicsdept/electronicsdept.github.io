@@ -47,3 +47,15 @@ function showSlides(n) {
 var d = new Date();
 var dy = d.getFullYear();
 document.getElementById("year").innerHTML = "All Rights Reserved "+dy;
+
+/*AJAX*/
+function loadContent() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if(this.readyState == 4 && this.status == 200) {
+      document.querySelector(".content").innerHTML = this.responseText;
+    }
+    };
+    xhttp.open("GET","update.txt",true);
+    xhttp.send();
+  }

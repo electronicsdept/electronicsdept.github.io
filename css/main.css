@@ -72,6 +72,7 @@ nav ul li{
     position: fixed;
     width: 100%;
     top:0; 
+    z-index: 100;
     }
     .fixed-nav  ul{
         background-color: rgba(4, 36, 77, 0.582);
@@ -265,6 +266,11 @@ padding-right: 10%;
     padding-top: 0.5%;
     padding-bottom: 100px;
     margin-bottom: -50px;
+}
+.content{
+    width: 75%;
+    text-align: center;
+    padding-top: 5px; 
 }
 /*Footer*/
 .about-footer{
