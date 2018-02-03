@@ -1,3 +1,17 @@
+/*Scroll*/
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
 /*Navbar toggle*/
 function navbar(){
     var x = document.getElementById("myNav");
@@ -8,7 +22,7 @@ function navbar(){
     }
     }
     /*fixed nav*/
-    // When the user scrolls the page, execute myFunction 
+    // When the user scrolls the page, execute navbar function 
 window.onscroll = function() {fixednav()};
 
 // Get the nav

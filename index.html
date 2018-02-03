@@ -8,9 +8,9 @@
   <meta name="description" content="Official Website of Electronics Department of Asutosh College" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
-<body onload="loadContent()">
+<body>
   <!--infobar-->
-  <div class="infobar">
+  <div class="infobar" id="home">
     <div class="phonenumber">Phone&nbsp;:&nbsp;033-2531-4177</div>
     <div class="mail">Mail:&nbsp;<a href="mailto:admin@example.com">admin@example.com</a></div>
   </div>
@@ -24,7 +24,7 @@
       </div>
     </div>
     <ul id="myNav" class="def">
-      <li><a href="#">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#faculty">Faculty</a></li>
       <li><a href="#updates">Updates</a></li>
@@ -133,6 +133,7 @@
         <!--copyright-->
         <div class="copyright" id="year"></div>
       </div>
+      <script src="js/jquery.js"></script>
       <script src="js/main.js" async></script>
 </body>
 </html>
