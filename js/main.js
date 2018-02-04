@@ -12,14 +12,26 @@ $(document).ready(function(){
     }
   });
 });
-/*Navbar toggle*/
-function navbar(){
-    var x = document.getElementById("myNav");
+/*Navbar toggle and autoclose when click else where*/
+    function navbar(){
+      var x = document.getElementById("myNav");
     if(x.className === "def"){
       x.className += " showing";
     } else {
     x.className = "def";
     }
+    }
+    window.onclick = function(event) {
+      if(!event.target.matches('.navicon')) {
+        var dropdown = document.getElementsByClassName("def");
+        var i;
+        for(i=0;i<dropdown.length;i++){
+          var showDropdown = dropdown[i];
+          if(showDropdown.classList.contains("showing")){
+            showDropdown.classList.remove("showing");
+          }
+        }
+      }
     }
     /*fixed nav*/
     // When the user scrolls the page, execute navbar function 
