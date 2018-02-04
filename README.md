@@ -1,6 +1,6 @@
 # Asutosh College Electronics Department Repository
-####*Experimental Site*
-
+## *Site under rapid developement*
+## Last updated on 15 January 2018
 **Data to added soon**
 
 * _**Projects**_
@@ -10,4 +10,3 @@
 ### For More Info Visit Facebook Group/College Website
 * [Facebook Group!](https://www.facebook.com/groups/112515842146289/)
 * [College Website!](http://www.asutoshcollege.in/index.html)
-
