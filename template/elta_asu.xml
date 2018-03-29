@@ -327,6 +327,18 @@ padding-right: 10%;
     padding-top: 5px; 
     margin: auto;
 }
+/*To hide atom and subscribe*/
+.blog-pager{
+display: none;
+}
+.feed-links{
+display: none;
+}
+.post-body, .entry-content {
+    text-align: center;
+    margin: auto;
+    width: 75%;
+}
 /*Footer*/
 .about-footer{
     margin-top:50px;
