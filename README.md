@@ -1,10 +1,10 @@
 # Asutosh College Electronics Department Repository
 ## *Site under rapid developement*
 ## Last updated on 15 January 2018
-**Data to added soon**
 
-* _**Projects**_
-* _**Softwares**_
+
+_**Projects**_
+ _**Electronics Softwares**_
 * _**University Previous Years Questions Papers(Theory)**_
 * _**University Previous Years Questions Papers(Practical)**_
 ### For More Info Visit Facebook Group/College Website
