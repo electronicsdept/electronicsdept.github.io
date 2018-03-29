@@ -1,12 +1,8 @@
-# Asutosh College Electronics Department Repository
-## *Site under rapid developement*
-## Last updated on 15 January 2018
+# _Department Of Electronics Asutosh College_
+### Website Development Repository
+### This repo has
+[x] Custom Blogger Template
 
+[x] Website Front End Design
 
-_**Projects**_
- _**Electronics Softwares**_
-* _**University Previous Years Questions Papers(Theory)**_
-* _**University Previous Years Questions Papers(Practical)**_
-### For More Info Visit Facebook Group/College Website
-* [Facebook Group!](https://www.facebook.com/groups/112515842146289/)
-* [College Website!](http://www.asutoshcollege.in/index.html)
+### *Maintained By Shreyan Nag*
