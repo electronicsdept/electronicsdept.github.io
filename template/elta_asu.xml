@@ -575,18 +575,12 @@ input[type=text]{
     </ul>
   </nav>
     <!--carousel-->
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img src="img/gallery/1.jpg"></img>
-        <div class="text">Welcome to Electronics Department Of Asutosh College</div>
-      </div>
-      <div class="mySlides fade">
-        <img src="img/gallery/2.jpg"></img>
-        <div class="text">Caption Two</div>
-      </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
+    <!--Add the quotted part to gadget-->
+  <div class="slideshow-container">  
+
+	  <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
+</b:section>
+      </div> 
       <!--About-->
       <div class="about col-12" id="about">
         <p class="dHeader">About Department</p>
@@ -597,11 +591,15 @@ input[type=text]{
       </div>
         <!--staff-->
         <!--Here using the same class as about-->
+
+
         <div class="staff col-12" id="faculty">
           <p class="sHeader">Faculty and Staff</p>
           <div class="underline"></div>
-          <div class="sInfo">
-            <div class="card col-2">
+		  
+         <div class="sInfo">
+		 <b:section class='sidebar' id='left-sidebar' preferred='yes'/></b:section>
+            <!--<div class="card col-2">
               <img src="img/avatar.png"></img>
                 <h4>Dr.Manidipa Kahali</h4>
                 <p>Head Of The Department</p>
@@ -641,7 +639,7 @@ input[type=text]{
                           <img src="img/avatar.png"></img>
                           <h4>Will be</h4>
                           <p>Added Soon</p>
-                        </div>
+                        </div> -->
           </div>
         </div>
       <!--notice-and-resources-->
@@ -650,9 +648,7 @@ input[type=text]{
         <div class="underline"></div>
         <div class="content">
 		<header>
-<!--<b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
-<b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
-</b:section> -->
+
 </header>
 <article>
 <b:section class='main' id='main' preferred='yes' showaddelement='no'>
@@ -661,8 +657,7 @@ input[type=text]{
 </b:section>
 </article>
 <aside>
-<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
-</b:section>
+
 </aside>
         </div>
       </div>
@@ -679,7 +674,7 @@ input[type=text]{
           </div>
           <div class="info" id="contact">
             <h2>Contact Us</h2>
-            <h3><i class="fa fa-envelope" aria-hidden="true"></i>	<a href="mailto:mailto:admin@example.com">admin@example.com</a></h3>
+			<h3><i class="fa fa-envelope" aria-hidden="true"></i>	<a href="mailto:mailto:admin@example.com">admin@example.com</a></h3>
             <h3><i class="fa fa-phone-square" aria-hidden="true"></i>	Phone	:	033-2531-4177</h3>
             <h3><i class="fa fa-address-card" aria-hidden="true"></i>	92, S. P. Mookerjee Road, Kolkata - 700 026</h3>
           </div>

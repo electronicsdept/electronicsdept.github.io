@@ -1,17 +1,3 @@
-/*Scroll*/
-$(document).ready(function(){
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    }
-  });
-});
 /*Navbar toggle and autoclose when click else where*/
     function navbar(){
       var x = document.getElementById("myNav");
