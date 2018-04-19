@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Electronics Department of Asutosh College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official Website of Electronics Department of Asutosh College" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#346fef">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+<body>
+  <!--infobar-->
+  <div class="infobar" id="home">
+    <div class="phonenumber">Phone&nbsp;:&nbsp;033-2531-4177</div>
+    <div class="mail">Mail:&nbsp;<a href="mailto:admin@example.com">admin@example.com</a></div> 
+  </div>
+  <!--navigation-->
+  <nav>
+    <div class="handler" onclick="navbar()">
+      <div class="navicon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <ul id="myNav" class="def">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#updates">Updates</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li id="searchbox"><a href="#">Search</a></li>
+    </ul>
+  </nav>
+    <!--search popup-->
+    <div id="popup" class="popupWindow">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <!--search widget-->
+      </div>
+    </div>
+    <!--carousel-->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="img/gallery/1.jpg">
+        <div class="text">Welcome to Electronics Department Of Asutosh College</div>
+      </div>
+      <div class="mySlides fade">
+        <img src="img/gallery/2.jpg">
+        <div class="text">Caption Two</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <!--About-->
+      <div class="about col-12" id="about">
+        <p class="dHeader">About Department</p>
+        <div class="underline"></div>
+        <div class="dContent">
+          In the  Year 2006, Under the visionary leadership of the then Principal Dr. Debabrata Chowdhury , and with the proper assistance  of  Prof. Bikash Chandra Pal, Prof.(Dr) Mainak Gupta  & Prof. Angshutosh Khan, and with very few students , Electronics Department started its journey and emerged as one of the prime Department of Asutosh College.
+        </div>
+      </div>
+        <!--staff-->
+        <!--Here using the same class as about-->
+        <div class="staff col-12" id="faculty">
+          <p class="sHeader">Faculty & Staff</p>
+          <div class="underline"></div>
+          <div class="sInfo">
+            <div class="card col-2">
+              <img src="img/avatar.png" />
+                <h4>Dr.Manidipa Kahali</h4>
+                <p>Head Of The Department</p>
+                <p>M.Sc., Ph.D</p>
+            </div>
+            <div class="card col-2">
+                <img src="img/avatar.png" />
+                  <h4>Arnab Samadder</h4>
+                  <p>CWTT</p>
+                  <p>M.Sc</p>
+              </div>
+              <div class="card col-2">
+                  <img src="img/avatar.png" />
+                    <h4>Dr.Sourav Kumar
+                        Bhowmick</h4>
+                        <p>CWTT</p>
+                        <p>M.Sc, Ph.D</p>
+                </div>
+                <div class="card">
+                    <img src="img/avatar.png" />
+                      <h4>Madhurima
+                          Chatterjee</h4>
+                          <p>PTT</p>
+                          <p>M.Sc</p>
+                  </div>
+                  <div class="card">
+                      <img src="img/avatar.png" />
+                        <h4>Will be</h4>
+                          <p>Added Soon</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/avatar.png" />
+                        <h4>Will be</h4>
+                          <p>Added Soon</p>
+                        </div>
+                      <div class="card ">
+                          <img src="img/avatar.png" />
+                          <h4>Will be</h4>
+                          <p>Added Soon</p>
+                        </div>
+          </div>
+        </div>
+      <!--notice-and-resources-->
+      <div class="col-12 document" id="updates">
+        <p class="header">Updates</p>
+        <div class="underline"></div>
+        <div class="content">
+        </div>
+      </div>
+      <!--downloads-->
+      <div class="col-12 downloads" id="download">
+      <p class="header">Downloads</p>
+      <div class="underline"></div>
+      <div class="content"></div>
+      </div>        
+      <!--about-->
+      <div class="col-12 about-footer">
+        <div class="social"><a href="https://www.facebook.com/electronics.asu/"><i class="fa fa-facebook-official fa-size" aria-hidden="true"></i></a></div>
+        <!--footer-main-->
+        <div class="footer-info">
+          <div class="info">
+            <h2>Electronics Department</h2>
+            <div class="logo-underline"></div>
+            <h3>Asutosh College</h3>
+          </div>
+          <div class="info" id="contact">
+            <h2>Contact Us</h2>
+            <h3><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<a href="mailto:mailto:admin@example.com">admin@example.com</a></h3>
+            <h3><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;Phone&nbsp;:&nbsp;033-2531-4177</h3>
+            <h3><i class="fa fa-address-card" aria-hidden="true"></i>&nbsp;92, S. P. Mookerjee Road, Kolkata - 700 026</h3>
+          </div>
+          <div class="info"><h2>Active Hours</h2>
+          <h3>Monday-Friday:- 11 AM To 4PM</h3>
+          <h3>Satuday:- 11AM To 2PM</h3>
+          </div>
+        </div>
+        <!--copyright-->
+        <div class="copyright" id="year"></div>
+      </div>
+      <script src="js/jquery.js"></script>
+      <script src="js/main.js" async></script>
+</body>
+</html>

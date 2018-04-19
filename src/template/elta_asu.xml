@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<b:include data='blog' name='all-head-content'/>
+<title>
+ <b:if cond='data:blog.pageType == &quot;index&quot;'>
+ <data:blog.pageTitle/>
+ <b:else/>
+ <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+ <data:blog.pageName/> | <data:blog.title/>
+ <b:else/>
+ Page Not Found | <data:blog.title/>
+ </b:if>
+ </b:if>
+</title>
+   <!-- Description and Keywords (start) -->
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+	
+    <meta content='Official Website of Electronics Department of Asutosh College' name='description'/>
+    </b:if>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content='YOUR KEYWORDS HERE' name='keywords'/>
+    <!-- Description and Keywords (end) -->
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+        <meta expr:content='data:blog.pageName' property='og:title'/>
+        <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+        <meta content='article' property='og:type'/>
+    </b:if>
+    <b:if cond='data:blog.postImageUrl'>
+        <meta expr:content='data:blog.postImageUrl' property='og:image'/>
+    <b:else/>
+    <b:if cond='data:blog.postImageThumbnailUrl'>
+        <meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+    </b:if></b:if>
+    <b:if cond='data:blog.metaDescription != &quot;&quot;'>
+        <meta expr:content='data:blog.metaDescription' name='og:description'/>
+    </b:if>
+	
+	
+	<b:include data='blog' name='all-head-content'/>
+	
+	
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
+	
+	
+  
+  <b:skin>
+  <![CDATA[
+  /*
+  ------------------------------
+  Name: Asutosh College Department Of Electronics Blogger Theme
+  Author: Shreyan Nag
+  Author URL: https://shreyannag.github.io/
+  */
+  
+  /*Main CSS*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*grid*/
+/*column widths*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+/*Infobar*/
+a{
+    text-decoration: none;
+    color: white;
+}
+.infobar{
+    width: 100%;
+    display: inline-block;
+    padding-top:16px;
+    padding-bottom: 16px; 
+    background-color: rgb(0, 153, 255);
+    margin-bottom: -5px;
+    color: white;
+}
+.phonenumber{
+    float: left;
+    margin-left: 15px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.mail{
+    float: right;
+    margin-right: 15px; 
+    padding: 5px;    
+    cursor: pointer;
+}
+
+/*Navbar*/
+nav ul li a{
+    color: white;
+}
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(4, 36, 77);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.5s;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    font-size: 1em;
+}
+.fixed-nav{  /*On scroll class is added via JS*/
+    position: fixed;
+    width: 100%;
+    top:0; 
+    z-index: 100;
+    }
+    .fixed-nav  ul{
+        background-color: rgba(4, 36, 77, 0.582);
+    }
+li:hover{
+    background-color:rgb(0, 153, 255);
+}
+.handler{
+    display: none;
+    width: 100%;
+    padding: 15px 10px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(4, 36, 77);
+}
+.navicon{
+padding: 0 45%; /*to make button center*/
+}
+.bar{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: white;
+}
+/*carousel*/
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides.fade{
+    margin-bottom: -5%;
+}
+/*image reponsive and sizing*/
+.slideshow-container > .mySlides.fade > img{
+    width: 100%;
+    background-size: cover;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #000000a6;
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  font-size: 2em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+.active:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/*Header*/
+.col-12.document > .header{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: -0.1px;
+    padding-bottom: 2px;
+}
+.underline{
+    margin: auto;
+    padding: 0;
+    width: 10em;
+    height: 5px;
+    background-color: rgb(0, 110, 255);
+}
+/*about*/
+.about{
+    background-color: rgba(4, 116, 255, 0.35);
+    margin-top: 5%;
+    padding-top: 0.5%;
+    padding-bottom: 6em;
+}
+.dHeader{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0px;
+    padding-bottom: 2px;
+}
+.dHeader > .underline {
+    padding-bottom: 2px;
+}
+.dContent{
+    padding-top: 3em;
+    margin:auto;
+    width: 75%;
+    font-size: 1.5em;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.637);
+    transition: 0.3s;
+}
+.dContent:hover{
+    color: black;
+}
+/*Staff*/
+.staff{
+    background-color: rgb(115, 174, 234);
+    padding-top: 0.5%;
+    padding-bottom: 6em;
+}
+.sHeader{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0;
+    padding-bottom: 2px;
+}
+.sHeader > .underline {
+    padding-bottom: 2px;
+}
+.sInfo{
+padding-left: 10%;
+padding-right: 10%;
+}
+.card {
+    display: inline-block;
+    height: auto;
+    margin: 2em 1em;
+    width: 16.66%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.637);
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.637);
+}
+.card > img {
+    padding-top: 4px;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card > h4{
+    text-align: center;
+}
+.card >p {
+    text-align: center;
+}
+/*Notice & Resources*/
+.document{
+    background-color: rgba(0, 117, 202, 0.63);
+    padding-top: 0.5%;
+    padding-bottom: 100px;
+    margin-bottom: -50px;
+}
+.content{
+    width: 75%;
+    text-align: center;
+    padding-top: 5px; 
+    margin: auto;
+}
+/*To hide atom and subscribe*/
+.blog-pager{
+display: none;
+}
+.feed-links{
+display: none;
+}
+.post-body, .entry-content {
+    text-align: center;
+    margin: auto;
+    width: 75%;
+}
+/*Footer*/
+.about-footer{
+    margin-top:50px;
+    background-color: rgba(39, 88, 132, 0.88);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 4em;  
+}
+.social{
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.fa-size{
+    font-size: 3em;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*footer main*/
+.footer-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 10px;
+    margin:0 5px;
+
+}
+.info{
+    display: block; /*Only For IE 10 & 11 Support*/
+    float: left; /*Only For IE 10 & 11 Support*/
+    padding: 10px 10px; 
+    color: white;
+}
+.info > h2{
+text-align: center;
+}
+.info > h3 {
+    text-align: center;
+}
+.logo-underline{
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    height: 5px;
+    background-color: white;
+}
+/*copyright*/
+.copyright{
+    padding-top: 100px; 
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+}
+/*adminstrator layout*/
+.form{
+    margin: auto;
+    padding: 0;
+    width:50%;
+}
+.displayinfo{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.loginTag{
+    text-align: center;
+    font-size: 1.2em;
+}
+input[type=text]{
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(0, 153, 255);
+    margin-top: 5%;
+    text-align: center;
+    font-size: 0.8em;
+}
+input[type=password]{
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(0, 153, 255);
+    margin-top: 5%;
+    text-align: center;
+    font-size: 0.8em;
+}
+.loginButton{
+    right: 50%;
+    margin-top:5%;
+    margin-right: 1em;
+    background-color: rgb(0, 153, 255);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:1em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.loginButton:hover{
+    background-color: rgba(131, 213, 245, 0.87);
+}
+/*Responsive*/
+@media screen and (max-width: 600px) {
+    .infobar{
+        padding-top:16px;
+        padding-bottom: 16px;
+    }
+    .mail{
+        float:left;
+        margin-left: auto;
+        padding: 2px;
+    }
+    .phonenumber{
+        margin-left:0;
+        padding-left: 25px; 
+        padding-right: 15px; 
+        padding: 2px;
+        line-height: normal;
+    }
+    /*navbar*/
+    nav ul{
+        max-height: 0;
+    }
+    .showing {
+        max-height: 22em;
+    }
+    nav ul li{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+    .handler{
+        display: block;
+        font-size: 1.5em;
+    }
+  /*carousel text*/
+  .text{
+      font-size: 1em;
+  }
+  /*header notice*/
+.col-12.document > .header{
+    font-size: 1.5em;
+}
+  /*facebook custom icon*/
+  .fa-size{
+    font-size: 2em;
+}
+/*About Header*/
+.dHeader{
+    font-size: 1.5em;
+}
+.dContent{
+    font-size: 1em;
+}
+.sHeader{
+    font-size: 1.5em;
+}
+/*card*/
+.card{
+    width: 100%;
+}
+.sInfo {
+    padding-left: 10%;
+    padding-right: 15%;
+}
+/*form*/
+.form{
+    width: 70%;
+}
+input[type=text]{
+    width: 100%;
+}
+.loginButton{
+    padding: 5px 15px;
+    font-size: 1em;
+    }
+}
+@media screen and (max-width: 300px) {
+    .mail{
+        float:right;
+    }
+    .phonenumber{
+        margin-left: 5px;
+        padding-left: 5px;
+        padding-right: 4px;
+        line-height: normal;
+    }
+    .fa-size{
+        font-size: 1em;
+    }
+    .sInfo {
+        padding-left: 10%;
+        padding-right: 20%;
+    }
+    .loginButton{
+    padding: 5px 15px;
+    font-size: 1em;
+    }
+}
+  
+ ]]></b:skin>
+</head>
+<body>
+<!-- BODY CONTENTS -->
+
+<!--infobar-->
+  <div class="infobar" id="home">
+    <div class="phonenumber">Phone	:	033-2531-4177</div>
+    <div class="mail">Mail:	<a href="mailto:admin@example.com">admin@example.com</a></div>
+  </div>
+  <!--navigation-->
+  <nav>
+    <div class="handler" onclick="navbar()">
+      <div class="navicon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <ul id="myNav" class="def">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#updates">Updates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+    <!--carousel-->
+    <!--Add the quotted part to gadget-->
+  <div class="slideshow-container">  
+
+	  <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
+</b:section>
+      </div> 
+      <!--About-->
+      <div class="about col-12" id="about">
+        <p class="dHeader">About Department</p>
+        <div class="underline"></div>
+        <div class="dContent">
+          In the  Year 2006, Under the visionary leadership of the then Principal Dr. Debabrata Chowdhury , and with the proper assistance  of  Prof. Bikash Chandra Pal, Prof.(Dr) Mainak Gupta  and Prof. Angshutosh Khan, and with very few students , Electronics Department started its journey and emerged as one of the prime Department of Asutosh College.
+        </div>
+      </div>
+        <!--staff-->
+        <!--Here using the same class as about-->
+
+
+        <div class="staff col-12" id="faculty">
+          <p class="sHeader">Faculty and Staff</p>
+          <div class="underline"></div>
+		  
+         <div class="sInfo">
+		 <b:section class='sidebar' id='left-sidebar' preferred='yes'/></b:section>
+            <!--<div class="card col-2">
+              <img src="img/avatar.png"></img>
+                <h4>Dr.Manidipa Kahali</h4>
+                <p>Head Of The Department</p>
+                <p>M.Sc., Ph.D</p>
+            </div>
+            <div class="card col-2">
+                <img src="img/avatar.png"></img>
+                  <h4>Arnab Samadder</h4>
+                  <p>CWTT</p>
+                  <p>M.Sc</p>
+              </div>
+              <div class="card col-2">
+                  <img src="img/avatar.png"></img>
+                    <h4>Dr.Sourav Kumar
+                        Bhowmick</h4>
+                        <p>CWTT</p>
+                        <p>M.Sc, Ph.D</p>
+                </div>
+                <div class="card">
+                    <img src="img/avatar.png"></img>
+                      <h4>Madhurima
+                          Chatterjee</h4>
+                          <p>PTT</p>
+                          <p>M.Sc</p>
+                  </div>
+                  <div class="card">
+                      <img src="img/avatar.png"></img>
+                        <h4>Will be</h4>
+                          <p>Added Soon</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/avatar.png"></img>
+                        <h4>Will be</h4>
+                          <p>Added Soon</p>
+                        </div>
+                      <div class="card ">
+                          <img src="img/avatar.png"></img>
+                          <h4>Will be</h4>
+                          <p>Added Soon</p>
+                        </div> -->
+          </div>
+        </div>
+      <!--notice-and-resources-->
+      <div class="col-12 document" id="updates">
+        <p class="header">Updates</p>
+        <div class="underline"></div>
+        <div class="content">
+		<header>
+
+</header>
+<article>
+<b:section class='main' id='main' preferred='yes' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+</b:widget>
+</b:section>
+</article>
+<aside>
+
+</aside>
+        </div>
+      </div>
+      <!--about-->
+	  <footer>
+      <div class="col-12 about-footer">
+        <div class="social"><a href="https://www.facebook.com/electronics.asu/"><i class="fa fa-facebook-official fa-size" aria-hidden="true"></i></a></div>
+        <!--footer-main-->
+        <div class="footer-info">
+          <div class="info">
+            <h2>Electronics Department</h2>
+            <div class="logo-underline"></div>
+            <h3>Asutosh College</h3>
+          </div>
+          <div class="info" id="contact">
+            <h2>Contact Us</h2>
+			<h3><i class="fa fa-envelope" aria-hidden="true"></i>	<a href="mailto:mailto:admin@example.com">admin@example.com</a></h3>
+            <h3><i class="fa fa-phone-square" aria-hidden="true"></i>	Phone	:	033-2531-4177</h3>
+            <h3><i class="fa fa-address-card" aria-hidden="true"></i>	92, S. P. Mookerjee Road, Kolkata - 700 026</h3>
+          </div>
+          <div class="info"><h2>Active Hours</h2>
+          <h3>Monday-Friday:- 11 AM To 4PM</h3>
+          <h3>Satuday:- 11AM To 2PM</h3>
+          </div>
+        </div>
+        <!--copyright-->
+        <div class="copyright" id="year"></div>
+      </div>
+
+
+</footer>
+
+<!--BODY CONTENTS ENDS-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script>
+//<![CDATA[
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+    function navbar(){
+      var x = document.getElementById("myNav");
+    if(x.className === "def"){
+      x.className += " showing";
+    } else {
+    x.className = "def";
+    }
+    }
+    window.onclick = function(event) {
+      if(!event.target.matches('.navicon')) {
+        var dropdown = document.getElementsByClassName("def");
+        var i;
+        for(i=0;i<dropdown.length;i++){
+          var showDropdown = dropdown[i];
+          if(showDropdown.classList.contains("showing")){
+            showDropdown.classList.remove("showing");
+          }
+        }
+      }
+    }
+
+window.onscroll = function() {fixednav()};
+
+
+var navi = document.querySelector("nav");
+
+
+var fixed = navi.offsetTop;
+
+
+function fixednav() {
+  if (window.pageYOffset >= fixed) {
+    navi.classList.add("fixed-nav");
+  } else {
+    navi.classList.remove("fixed-nav");
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+} 
+
+var d = new Date();
+var dy = d.getFullYear();
+document.getElementById("year").innerHTML = "All Rights Reserved "+dy;
+
+
+
+//]]>
+</script>
+</body>
+</html>

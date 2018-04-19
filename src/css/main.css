@@ -1,0 +1,534 @@
+/*fontawesome*/
+@import url('fontawesome/css/font-awesome.min.css');
+/*Main CSS*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*grid*/
+/*column widths*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+/*Infobar*/
+a{
+    text-decoration: none;
+    color: white;
+}
+.infobar{
+    width: 100%;
+    display: inline-block;
+    padding-top:16px;
+    padding-bottom: 16px; 
+    background-color: rgb(0, 153, 255);
+    margin-bottom: -5px;
+    color: white;
+}
+.phonenumber{
+    float: left;
+    margin-left: 15px;
+    line-height: 25px;
+    cursor: pointer;
+}
+.mail{
+    float: right;
+    margin-right: 15px; 
+    padding: 5px;    
+    cursor: pointer;
+}
+
+/*Navbar*/
+nav ul li a{
+    color: white;
+}
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(4, 36, 77);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.5s;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    font-size: 1em;
+}
+.fixed-nav{  /*On scroll class is added via JS*/
+    position: fixed;
+    width: 100%;
+    top:0; 
+    z-index: 100;
+    }
+    .fixed-nav  ul{
+        background-color: rgba(4, 36, 77, 0.582);
+    }
+li:hover{
+    background-color:rgb(0, 153, 255);
+}
+.handler{
+    display: none;
+    width: 100%;
+    padding: 15px 10px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(4, 36, 77);
+}
+.navicon{
+padding: 0 45%; /*to make button center*/
+}
+.bar{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: white;
+}
+/*carousel*/
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.mySlides.fade{
+    margin-bottom: -5%;
+}
+/*image reponsive and sizing*/
+.slideshow-container > .mySlides.fade > img{
+    width: 100%;
+    background-size: cover;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #000000a6;
+  text-shadow: 1px 1px rgb(255, 255, 255);
+  font-size: 2em;
+  padding: 8px 12px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+.active:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/*search pop up modal*/
+.popupWindow {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Header*/
+.col-12.document > .header{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: -0.1px;
+    padding-bottom: 2px;
+}
+.underline{
+    margin: auto;
+    padding: 0;
+    width: 10em;
+    height: 5px;
+    background-color: rgb(0, 110, 255);
+}
+/*about*/
+.about{
+    background-color: rgba(4, 116, 255, 0.35);
+    margin-top: 5%;
+    padding-top: 0.5%;
+    padding-bottom: 6em;
+}
+.dHeader{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0px;
+    padding-bottom: 2px;
+}
+.dHeader > .underline {
+    padding-bottom: 2px;
+}
+.dContent{
+    padding-top: 3em;
+    margin:auto;
+    width: 75%;
+    font-size: 1.5em;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.637);
+    transition: 0.3s;
+}
+.dContent:hover{
+    color: black;
+}
+/*Staff*/
+.staff{
+    background-color: rgb(115, 174, 234);
+    padding-top: 0.5%;
+    padding-bottom: 6em;
+}
+.sHeader{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0;
+    padding-bottom: 2px;
+}
+.sHeader > .underline {
+    padding-bottom: 2px;
+}
+.sInfo{
+padding-left: 10%;
+padding-right: 10%;
+}
+.card {
+    display: inline-block;
+    height: auto;
+    margin: 2em 1em;
+    width: 16.66%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.637);
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.637);
+}
+.card > img {
+    padding-top: 4px;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card > h4{
+    text-align: center;
+}
+.card >p {
+    text-align: center;
+}
+/*Notice & Resources*/
+.document{
+    background-color: rgba(0, 117, 202, 0.63);
+    padding-top: 0.5%;
+    padding-bottom: 100px;
+    margin-bottom: -50px;
+}
+.content{
+    width: 75%;
+    text-align: center;
+    padding-top: 5px; 
+    margin:auto;
+}
+/*Download Section*/
+.downloads {
+    background-color: rgb(0, 125, 255, 0.73);
+    padding-top: 0.5%;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    margin-bottom: -50px;
+}
+.col-12.downloads > .header{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: -0.1px;
+    padding-bottom: 2px;
+}
+/*Footer*/
+.about-footer{
+    margin-top:50px;
+    background-color: rgba(39, 88, 132, 0.88);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 4em;  
+}
+.social{
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.fa-size{
+    font-size: 3em;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*footer main*/
+.footer-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 10px;
+    margin:0 5px;
+
+}
+.info{
+    display: block; /*Only For IE 10 & 11 Support*/
+    float: left; /*Only For IE 10 & 11 Support*/
+    padding: 10px 10px; 
+    color: white;
+}
+.info > h2{
+text-align: center;
+}
+.info > h3 {
+    text-align: center;
+}
+.logo-underline{
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    height: 5px;
+    background-color: white;
+}
+/*copyright*/
+.copyright{
+    padding-top: 100px; 
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+}
+/*adminstrator layout*/
+.form{
+    margin: auto;
+    padding: 0;
+    width:50%;
+}
+.displayinfo{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.loginTag{
+    text-align: center;
+    font-size: 1.2em;
+}
+input[type=text]{
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(0, 153, 255);
+    margin-top: 5%;
+    text-align: center;
+    font-size: 0.8em;
+}
+input[type=password]{
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid rgb(0, 153, 255);
+    margin-top: 5%;
+    text-align: center;
+    font-size: 0.8em;
+}
+.loginButton{
+    right: 50%;
+    margin-top:5%;
+    margin-right: 1em;
+    background-color: rgb(0, 153, 255);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:1em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.loginButton:hover{
+    background-color: rgba(131, 213, 245, 0.87);
+}
+/*Responsive*/
+@media screen and (max-width: 600px) {
+    .infobar{
+        padding-top:16px;
+        padding-bottom: 16px;
+    }
+    .mail{
+        float:left;
+        margin-left: auto;
+        padding: 2px;
+    }
+    .phonenumber{
+        margin-left:0;
+        padding-left: 25px; 
+        padding-right: 15px; 
+        padding: 2px;
+        line-height: normal;
+    }
+    /*navbar*/
+    nav ul{
+        max-height: 0;
+    }
+    .showing {
+        max-height: 22em;
+    }
+    nav ul li{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+    .handler{
+        display: block;
+        font-size: 1.5em;
+    }
+  /*carousel text*/
+  .text{
+      font-size: 1em;
+  }
+  /*header notice*/
+.col-12.document > .header{
+    font-size: 1.5em;
+}
+/*Download header*/
+.col-12.downloads > .header{
+    font-size: 1.5em;
+}
+  /*facebook custom icon*/
+  .fa-size{
+    font-size: 2em;
+}
+/*About Header*/
+.dHeader{
+    font-size: 1.5em;
+}
+.dContent{
+    font-size: 1em;
+}
+.sHeader{
+    font-size: 1.5em;
+}
+/*card*/
+.card{
+    width: 100%;
+}
+.sInfo {
+    padding-left: 10%;
+    padding-right: 15%;
+}
+/*form*/
+.form{
+    width: 70%;
+}
+input[type=text]{
+    width: 100%;
+}
+.loginButton{
+    padding: 5px 15px;
+    font-size: 1em;
+    }
+}
+@media screen and (max-width: 300px) {
+    .mail{
+        float:right;
+    }
+    .phonenumber{
+        margin-left: 5px;
+        padding-left: 5px;
+        padding-right: 4px;
+        line-height: normal;
+    }
+    .fa-size{
+        font-size: 1em;
+    }
+    .sInfo {
+        padding-left: 10%;
+        padding-right: 20%;
+    }
+    .loginButton{
+    padding: 5px 15px;
+    font-size: 1em;
+    }
+}
