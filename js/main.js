@@ -1,4 +1,16 @@
-/*Navbar toggle and autoclose when click else where*/
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
     function navbar(){
       var x = document.getElementById("myNav");
     if(x.className === "def"){
@@ -19,17 +31,16 @@
         }
       }
     }
-    /*fixed nav*/
-    // When the user scrolls the page, execute navbar function 
+
 window.onscroll = function() {fixednav()};
 
-// Get the nav
+
 var navi = document.querySelector("nav");
 
-// Get the offset position of the navbar
+
 var fixed = navi.offsetTop;
 
-// Add the fixed class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
 function fixednav() {
   if (window.pageYOffset >= fixed) {
     navi.classList.add("fixed-nav");
@@ -37,7 +48,7 @@ function fixednav() {
     navi.classList.remove("fixed-nav");
   }
 }
-/*carousel*/
+
 var slideIndex = 1;
 showSlides(slideIndex);
 function plusSlides(n) {
@@ -55,19 +66,34 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
 } 
-/*auto year update*/
+
 var d = new Date();
 var dy = d.getFullYear();
 document.getElementById("year").innerHTML = "All Rights Reserved "+dy;
 
-/*AJAX*/
-function loadContent() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if(this.readyState == 4 && this.status == 200) {
-      document.querySelector(".content").innerHTML = this.responseText;
+
+// Get the modal
+var popupWindow = document.getElementById('popup');
+
+// Get the button that opens the modal
+var searchbox = document.getElementById("searchbox");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+searchbox.onclick = function() {
+    popupWindow.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    popupWindow.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == popupWindow) {
+        popupWindow.style.display = "none";
     }
-    };
-    xhttp.open("GET","update.txt",true);
-    xhttp.send();
-  }
+}
