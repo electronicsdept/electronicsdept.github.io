@@ -8,6 +8,6 @@
 
 Visit the development page [Click Here](https://electronicsdept.github.io/src/).
 
-Visit the Webpage [Click Here](https://themetest102.blogspot.in/).
+Visit the Webpage [Click Here](https://asutoshelta.blogspot.in/).
 
 ### *Maintained By Shreyan Nag*
