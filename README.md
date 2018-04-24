@@ -5,6 +5,7 @@
 
 - [x] Website Front End Design
 
+View the source code [Click Here](https://github.com/electronicsdept/electronicsdept.github.io/)
 
 Visit the development page [Click Here](https://electronicsdept.github.io/src/).
 
