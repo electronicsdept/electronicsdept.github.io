@@ -187,10 +187,10 @@ img {vertical-align: middle;}
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .popup-content {
-    background-color: #fefefe;
+    background-color: #ffffff00;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #8880;
     width: 80%;
 }
 .close {
