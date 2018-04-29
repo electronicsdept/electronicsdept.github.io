@@ -49,7 +49,12 @@ a{
     padding: 5px;    
     cursor: pointer;
 }
-
+/*Tables*/
+table {
+    border-color: black;
+    border-spacing: 0px;
+    border-width: 0px 0px 0px 0px;
+}
 /*Navbar*/
 nav ul li a{
     color: white;
