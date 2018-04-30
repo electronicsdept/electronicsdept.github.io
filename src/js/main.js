@@ -1,3 +1,6 @@
+// Author : Shreyan Nag
+// Version: 0.86
+// Project : DEPT_ELTA_ASU
 $(document).ready(function(){
   $("a").on('click', function(event) {
     if (this.hash !== "") {
