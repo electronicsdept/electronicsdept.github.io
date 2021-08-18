@@ -15,6 +15,10 @@ body{
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+html
+{
+    scroll-behavior: smooth;
+}
 /*grid*/
 /*column widths*/
 .col-1 {width: 8.33%;}
